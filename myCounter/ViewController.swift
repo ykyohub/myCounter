@@ -8,12 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var count: Int = 0
+    
+    @IBOutlet weak var label: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        label.text = String(count)
     }
-
-
+    @IBAction func upButton(_ sender: Any) {
+        count += 1
+        viewDidLoad()
+    }
+    @IBAction func downButton(_ sender: Any) {
+        count -= 1
+        viewDidLoad()
+    }
 }
 
